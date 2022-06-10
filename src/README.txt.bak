@@ -1,0 +1,28 @@
+Scheduling Software - The purpose of this application is to help companies manage appointments and schedules with clients and providers.  
+
+Michael White
+mwhi145@wgu.edu
+
+Scheduling Software version 1
+
+2/10/2022
+
+IDE Used: Intellij Community 2021.3
+
+JDK Version: Java SE 11.0.13
+
+JavaFX Version: javafx-sdk-17.0.2
+
+MySQL Driver Connector: mysql-connector-java-8.0.25
+
+
+
+Directions:
+Login with your username and password.  For testing purposes username is test and password is test.  This takes you to the main appointments page.  This lists all the appointments
+in the database.  You have the option from here to add, update or delete appointments.  In the top left corner is the customers button and if you click on that you can see a 
+list of all customers.  This page also has buttons to add, update or delete customers.  Once you save an appointment or a customer either by adding or updating the new object 
+will appear on the corresponding list of either the appointments page or customers page. 
+
+Additional Report:
+For the additional report I have counted the number of customers per country.  This section of the reports page will show how many customers are in the US, Canada and the UK respectivly. 
+

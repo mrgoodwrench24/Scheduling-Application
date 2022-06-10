@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+    <children>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1200.0">
+            <children>
+            <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#onActionCustomers" prefHeight="40.0" prefWidth="150.0" text="Customers" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+                <Label text="Appointments">
+                    <font>
+                        <Font size="32.0" />
+                    </font>
+               <HBox.margin>
+                  <Insets left="275.0" right="275.0" />
+               </HBox.margin>
+                </Label>
+            <Label fx:id="dateLabel" layoutX="498.0" layoutY="37.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </HBox>
+        <VBox layoutY="100.0" prefHeight="450.0" prefWidth="1200.0">
+            <children>
+                <TableView fx:id="appointmentsTableView" maxWidth="-Infinity" prefHeight="450.0" prefWidth="1100.0">
+                    <columns>
+                        <TableColumn fx:id="appointmentIDCol" prefWidth="100.0" text="Appointment ID" />
+                        <TableColumn fx:id="titleCol" minWidth="9.0" prefWidth="100.0" text="Title" />
+                        <TableColumn fx:id="descriptionCol" minWidth="0.0" prefWidth="100.0" text="Description" />
+                        <TableColumn fx:id="locationCol" prefWidth="100.0" text="Location" />
+                        <TableColumn fx:id="contactCol" prefWidth="100.0" text="Employee" />
+                        <TableColumn fx:id="typeCol" prefWidth="100.0" text="Type" />
+                        <TableColumn fx:id="startTimeCol" prefWidth="150.0" text="Start Time" />
+                        <TableColumn fx:id="endTimeCol" prefWidth="150.0" text="End Time" />
+                        <TableColumn fx:id="customerIDCol" prefWidth="100.0" text="Customer_ID" />
+                        <TableColumn fx:id="userIDCol" prefWidth="100.0" text="User_ID" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="50.0" />
+                    </VBox.margin>
+                </TableView>
+            </children>
+        </VBox>
+      <HBox alignment="TOP_CENTER" layoutY="550.0" prefHeight="50.0" prefWidth="1200.0">
+         <children>
+            <RadioButton layoutX="617.0" layoutY="30.0" mnemonicParsing="false" onAction="#onActionAllAppointments" selected="true" text="All Appointments">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="vToggle" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#onActionWeek" text="This Week" toggleGroup="$vToggle">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" onAction="#onActionMonth" text="This Month" toggleGroup="$vToggle">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutY="650.0" prefHeight="100.0" prefWidth="1200.0">
+         <children>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionAddAppointment" prefHeight="40.0" prefWidth="200.0" text="Add Appointment" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="410.0" layoutY="35.0" mnemonicParsing="false" onAction="#onActionUpdateAppointment" prefHeight="40.0" prefWidth="200.0" text="Update Appointment" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="810.0" layoutY="35.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefHeight="40.0" prefWidth="200.0" text="Delete Appointment" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="648.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionReports" prefHeight="40.0" prefWidth="200.0" text="Reports" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="660.0" layoutY="35.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="40.0" prefWidth="150.0" text="Exit" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
